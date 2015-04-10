@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+    <title>Tomcat WebSocket Chat</title>
+    
+    <script type="text/javascript" src="resources/js/wsImpl.js"/>
+
+</h:head> 
+<body onload="ws.impl.connect('ws://localhost:8080/WebSocket/websocket/chat');"> 
+	 <textarea id="chatlog"></textarea><br/>
+     <input id="msg" type="text"/>
+     <button type="submit" id="sendButton" onclick="ws.impl.send('msg');">Send!</button>
+     <button type="submit" id="sendButton" onclick="ws.impl.close();">End</button>
+</body> 
+</html>
