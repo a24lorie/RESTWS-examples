@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	
+	<display-name>STOCKS</display-name>
+	<context-param>
+		<param-name>com.sun.faces.validateXml</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.FACELETS_DEVELOPMENT</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value>
+		<!-- <param-value>Production</param-value> -->
+	</context-param>
+	<context-param>
+	    <param-name>com.sun.faces.sendPoweredByHeader</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>server</param-value>
+		<!-- <param-value>client</param-value> -->
+	</context-param>
+	<context-param>
+	    <param-name>javax.faces.SERIALIZE_SERVER_STATE</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+		<param-value>/WEB-INF/stocks.taglib.xml</param-value>
+	</context-param>
+   <!--  ==================== servlets ==================== -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TimerNotification</servlet-name>
+		<servlet-class>org.alb.sse.server.listeners.Timer</servlet-class>
+		<load-on-startup> 1 </load-on-startup>
+	</servlet>
+	<servlet>
+        <servlet-name>My Jersey JAX RS</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>org.alb.sse.jersey.MyApplication</param-value>
+
+            <!-- 
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>org.alb.sse.jersey.listeners</param-value> 
+            -->
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+
+	<!-- ==================== servlet mappings ==================== -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name> TimerNotification </servlet-name>
+		<url-pattern> /timer </url-pattern>
+	</servlet-mapping>
+	
+    <servlet-mapping>
+        <servlet-name>My Jersey JAX RS</servlet-name>
+        <url-pattern>/jersey/*</url-pattern>
+    </servlet-mapping>
+    
+	<!-- ==================== session-timeout ==================== -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/views/error.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/views/error.html</location>
+	</error-page>
+	
+	<!-- ==================== security ==================== -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>AdminSecurity</web-resource-name>
+			<description>
+	             Security constraint for
+	             resources in the admin directory
+	          </description>
+			<url-pattern>/admin/*</url-pattern>
+			<http-method>POST</http-method>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>Constraint for admin pages</description>
+			<role-name>appAdmin</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<description>SSL not required</description>
+			<transport-guarantee>NONE</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>stock</realm-name>
+	</login-config>
+</web-app>

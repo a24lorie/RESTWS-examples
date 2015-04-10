@@ -1,0 +1,520 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* =========== HEADER STARTS =========== */
+.navbar.navbar-fixed-top{
+	background:url('../img/footer-grain.png') top left repeat #287fa0;
+	border-color: transparent;
+	margin:auto;
+	z-index:99999;
+}
+.navbar.navbar-fixed-top .navbar-header{
+	float: left;
+}
+.navbar.navbar-fixed-top .navbar-header .page-title.navbar-brand{
+	padding-top: 0px;
+	margin-left: 0px;
+}
+.navbar.navbar-fixed-top .navbar-header .page-title h1{
+	float: left;
+	font-size:37px;
+	font-style:italic;
+	font-family:"Open Sans";
+	font-weight:600;
+	color:#ffffff;
+	text-shadow: 1px 1px 1px #1c1c1c;
+	z-index:10000;
+	margin: 0px;
+}
+.navbar.navbar-fixed-top .navbar-social{
+	float: right;
+	height: 50px;
+	padding-top: 10px;
+	font-size: 18px;
+	line-height: 20px;
+}
+.navbar.navbar-fixed-top .navbar-social ul.sm{
+	position: relative;
+	list-style: none outside; 
+	margin: 0;
+	padding: 0;
+}
+.navbar.navbar-fixed-top .navbar-social ul.sm li{
+	position: relative;
+	padding: 0;
+	margin: 0 4px 6px 0;
+	float: left;
+	width: 28px;
+	height: 28px;	
+	text-indent: -99999px;
+}
+.navbar.navbar-fixed-top .navbar-social ul.sm li a{
+	position: relative;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;	
+}
+.navbar.navbar-fixed-top .navbar-social ul.sm li.facebook{
+	background-image:url('../img/icons/sm_icons/round/icon-facebook.png');
+}
+.navbar.navbar-fixed-top .navbar-social ul.sm li.twitter{
+	background-image:url('../img/icons/sm_icons/round/icon-twitter.png');
+}
+.navbar.navbar-fixed-top .navbar-social ul.sm li.linkedin{
+	background-image:url('../img/icons/sm_icons/round/icon-linkedin.png');
+}
+
+/* =========== BODY STARTS =========== */
+
+body {
+	background:url('../img/noise-lowest.png') top left repeat #FDFDFD;
+}
+body .container.main  .intro p{
+	line-height: 25px;
+	font-size: 16px;
+}
+/* ===========  TAB STYLES  =========== */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background-color: #f4f3f3;
+}
+
+.tab-content{
+	border-left: 1px solid #d8d8d8;
+	border-right: 1px solid #d8d8d8;
+	border-bottom: 1px solid #d8d8d8;
+	border-top-color: transparent;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	background-color: #f4f3f3;
+	margin-bottom: 18px;
+}
+.tab-content .tab-pane .row{
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.container.main .nav.nav-tabs > li > a{
+	padding: 10px 9px;
+}
+
+/* ===== SIDE BAR STYLES ====== */
+/* Tablet Portrait size to standard [768 - 960] (devices and browsers) */
+/* Hide for mobile, show later */
+.sidebar {
+	display: none;
+	color: #fff;	
+	background: url('../img/footer-grain.png') top left repeat #4b4e4f;
+	box-shadow: inset -0.25em 0 0.25em 0 rgba(0,0,0,0.125);
+	text-align: right;
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: 1000;
+	padding-right: 0px;
+	padding-left: 0px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+}
+.sidebar .sidebar-top{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.sidebar .sidebar-top .sidebar-logo{
+	position: relative;
+	margin-top: 35px;
+	margin-left: 5px;
+	margin-right: 15px;
+	margin-bottom: 25px;
+	padding-bottom: 30px;
+	min-height: 48px;
+	cursor: default;
+	border-bottom: 1px solid #707579;
+}
+.sidebar .sidebar-top .sidebar-logo .sidebar-image{
+	position: relative;
+	margin: 0 0 0.5em 1.0em;
+	width: 48px;
+	height: 48px;
+	float: left;
+}
+.sidebar .sidebar-top .sidebar-logo .sidebar-image.sidebar-avatar48 img{
+	width: 48px;
+	height: 48px;
+}
+.sidebar .sidebar-top .sidebar-logo h1{
+	position: relative;
+	color: #fff;
+	font-size: 21px;
+	font-weight: 600;
+	line-height: 1em;
+}
+.sidebar .sidebar-top .sidebar-logo .sidebar-byline{
+	position: relative;
+	display: block;
+	font-size: 13px;
+	font-weight: 300;
+	color: rgba(255,255,255,0.5);
+	line-height: 1.25em;
+	margin: 0.5em 0 0 0;
+}
+.sidebar .sidebar-top .sidebar-nav ul{
+	list-style:none;
+	padding: 0px;
+}
+.sidebar .sidebar-top .sidebar-nav ul li a{
+	display: block;
+	font-size: 13px;
+	padding: 15px 1.5em 15px 1.5em;
+	color: rgba(255,255,255,0.5);
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+.sidebar .sidebar-top .sidebar-nav ul li a.active{
+	background: rgba(0,0,0,0.15);
+	box-shadow: inset 0 0 0.25em 0 rgba(0,0,0,0.125);
+	color: #fff;
+}
+.sidebar .sidebar-top .sidebar-nav ul li a span{
+	margin-right: 15px;
+}
+.sidebar .sidebar-top .sidebar-nav ul li a span:before{
+	left: 100%;
+	margin-left: -1.50em;
+	position: absolute;
+	text-align: center;
+	line-height: 1.0em;
+}
+.sidebar .sidebar-bottom{
+	position: absolute;
+	left: 0;
+	bottom: 30px;
+	width: 100%;
+}
+.sidebar .sidebar-bottom ul.icons{
+	font-size: 0.8em;
+	margin: 0 0 2em 0;
+	text-align: center;
+	display: block;
+	list-style-type: disc;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.sidebar .sidebar-bottom ul.icons li{
+	display: inline;
+}
+.sidebar .sidebar-bottom ul.icons a{
+	display: inline;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	border: 0;
+}
+.sidebar .sidebar-bottom ul.icons a span{
+	display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar {    
+    display: block;
+  }
+  
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+
+/* Sidebar navigation
+.nav-sidebar {
+  margin-right: -21px; 20px padding + 1px border 
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a {
+  color: #fff;
+  background-color: #428bca;
+} */
+
+/* Main content */
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+/* ============ FOMR STYLES ============= */
+.form-horizontal .control-label{
+	text-align: right;
+}
+.form-horizontal .row .form-group.col-md-6 .col-xs-3{
+	width: 28%;
+} 
+.form-horizontal .row .form-group.col-md-6 .col-xs-9{
+	width: 72%;
+}
+.form-horizontal .row .form-group{
+	margin-left: 0px;
+	margin-right: 0px;
+} 
+.form-group.col-md-6 > .control-label{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.form-horizontal.login .form-group .login-input-container{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 20px;
+}
+/* =========== FOOTER STYLES =========== */
+.footer{
+	background: url('../img/footer-grain.png') top left repeat #287fa0;
+	margin-top: 20px;
+}
+.footer .row-offcanvas{
+	background: url('../img/footer-grain.png') top left repeat #287fa0;
+}
+.footer .foot-nav {	
+	height:22px;
+	margin:12px 2px 0 2px;
+}
+.footer .foot-nav ul.sm{	
+	margin-top: 10px; 
+	padding:0;
+	text-align: center;	
+}
+.footer .foot-nav ul.sm li{	
+	display: inline;
+}
+.footer .foot-nav ul.sm li a{	
+	height: 30px;
+	color: #FFF;
+	font-size: 1em;
+	font-weight: bold;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.footer .foot-nav ul.sm li a:hover{	
+	height: 30px;
+	color: #353232;
+	font-size: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.footer .foot-nav .copy.center{
+	float: none;
+	font-size: 0.8em;
+	color: #FFF;
+	text-align: center;
+	margin-left:18px;
+}
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (min-width: 960px) 
+{
+	.mobile-only{
+		display: none;
+	}	
+	.tablet-only{
+		display: none;
+	}	
+	.desktop-only{
+		display: block;
+	}
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) 
+{
+	.mobile-only{
+		display: none !important;
+	} 
+	.tablet-only{
+		display: none !important;
+	}
+	.desktop-only{
+		display: block !important;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) 
+{
+	.desktop-only{
+		display: block !important;
+	}
+	.tablet-only{
+		display: none !important;
+	}
+	.mobile-only{
+		display: none !important;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) [0-767]*/
+@media only screen and (max-width: 767px) 
+{
+	.navbar.navbar-fixed-top .row{
+		margin-left: 0px;
+		margin-right: 0px
+	}
+	
+	.mobile-only{
+		display: none !important;
+	}	
+	.tablet-only{
+		display: block !important;
+	}	
+	.desktop-only{
+		display: none !important;
+	}
+	
+	/*Off Canvas*/
+	.row-offcanvas {
+	    position: relative;
+	    -webkit-transition: all .25s ease-out;
+	       -moz-transition: all .25s ease-out;
+	            transition: all .25s ease-out;
+	}
+
+	.row-offcanvas-right {
+    	right: 0;
+	}
+
+	.row-offcanvas-left {
+    	left: 0;
+	}
+
+	.row-offcanvas-right
+	.sidebar-offcanvas {
+    	right: -50%; /* 6 columns */
+	}
+
+	.row-offcanvas-left
+  	.sidebar-offcanvas {
+    	left: -50%; /* 6 columns */
+	}
+
+  	.row-offcanvas-right.active {
+    	right: 50%; /* 6 columns */
+	}
+
+  	.row-offcanvas-left.active {
+    	left: 50%; /* 6 columns */
+	}
+	
+	.sidebar-offcanvas {
+    	position: absolute;
+		top: 0;
+		width: 50%; /* 6 columns */
+	}
+	
+	.sidebar-offcanvas.active {
+	    position: fixed;
+	    top: 40px;
+	    bottom: 0;
+	    left: 0;
+	    z-index: 1000;
+	    display: block;
+	    padding: 20px;
+	    overflow-x: hidden;
+	    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	    background-color: #f5f5f5;
+	    border-right: 1px solid #eee;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait [480-767](devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.mobile-only{
+		display: block !important;
+	}
+	.tablet-only{
+		display: block !important;
+	}	
+	.desktop-only{
+		display: none !important;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	.mobile-only{
+		display: block !important;
+	}
+	.tablet-only{
+		display: none !important;
+	}	
+	.desktop-only{
+		display: none !important;
+	}
+	
+	.form-horizontal .control-label{
+		text-align: left;
+	}
+	.form-horizontal .row .form-group.col-md-6 .col-xs-3{
+		width: 100%;
+	} 
+	.form-horizontal .row .form-group.col-md-6 .col-xs-9{
+		width: 100%;
+	}
+	.form-group.col-md-6 > .control-label{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
